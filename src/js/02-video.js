@@ -13,8 +13,8 @@ player
 
 player.on(
   'timeupdate',
-  throttle(currentTime => {
-    localStorage.setItem('videoplayer-current-time', currentTime.seconds);
+  throttle(({ seconds }) => {
+    localStorage.setItem('videoplayer-current-time', seconds);
   }, 1000)
 );
 
